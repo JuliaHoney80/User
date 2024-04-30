@@ -29,7 +29,7 @@ public class DataGenerator {
         given()
                 .baseUri("http://localhost:9999")// "дано"
                 .spec(requestSpec) // указываем, какую спецификацию используем
-                .body(new RegistrationDto("vasya", "password", "active")) // передаём в теле объект, который будет преобразован в JSON
+                .body(user)// передаём в теле объект, который будет преобразован в JSON
 
                 .when() // "когда"
                 .post("/api/system/users") // на какой путь относительно BaseUri отправляем запрос

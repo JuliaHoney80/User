@@ -30,7 +30,7 @@ public class UserTest {
         $("[data-test-id='login'] input").setValue(registeredUser.getLogin());
         $("[data-test-id='password'] input").setValue(registeredUser.getPassword());
         $("button.button").click();
-        $("h2").shouldHave(Condition.exactText("Интернет банк")).shouldBe(Condition.visible);
+        $("h2").shouldHave(Condition.exactText("Личный кабинет")).shouldBe(Condition.visible);
     }
 
     @Test
@@ -55,7 +55,7 @@ public class UserTest {
         $("button.button").click();
 
         $("[data-test-id='error-notification'] .notification__content")
-                .shouldHave(Condition.text("Ошибка! + Пользователь заблокирован"), Duration.ofSeconds(10))
+                .shouldHave(Condition.text("Ошибка! Пользователь заблокирован"), Duration.ofSeconds(10))
                 .shouldBe((Condition.visible));
 
     }
